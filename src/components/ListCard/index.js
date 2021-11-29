@@ -2,7 +2,7 @@ import React from 'react';
 import * as styles from './style.module.scss';
 import PropTypes from 'prop-types';
 
-export default function ListBox(props) {
+export default function ListCard(props) {
   return (
     <div className={styles.listbox}>
       <div className={styles.header}>
@@ -14,7 +14,7 @@ export default function ListBox(props) {
   );
 }
 
-ListBox.propTypes = {
+ListCard.propTypes = {
   props: PropTypes.object,
   children: PropTypes.oneOfType([
     PropTypes.string,

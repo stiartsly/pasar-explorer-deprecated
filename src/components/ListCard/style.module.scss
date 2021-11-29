@@ -8,6 +8,10 @@
   border-radius: 20px;
   background-color: #ffffff;
 
+  @media only screen and (max-width: 1300px) {
+    width: 100%;
+  }
+
   .header {
     display: flex;
     justify-content: space-between;
@@ -23,6 +27,7 @@
       color: #000000;
     }
   }
+
   .collectibleitem {
     padding: 20px 0;
     display: flex;
@@ -34,8 +39,13 @@
 
     .row {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       min-width: 500px;
+
+      @media only screen and (max-width: 650px) {
+        min-width: 0;
+      }
 
       .title {
         font-size: 26px;
@@ -45,6 +55,9 @@
       .timestamp {
         font-size: 16px;
         color: rgba($color: #000000, $alpha: 0.42);
+        @media only screen and (max-width: 650px) {
+          display: none;
+        }
       }
 
       .tokenid {
@@ -55,6 +68,9 @@
       .gasfee {
         font-size: 16px;
         color: rgba($color: #000000, $alpha: 0.42);
+        @media only screen and (max-width: 650px) {
+          display: none;
+        }
       }
     }
   }
@@ -69,9 +85,14 @@
     }
 
     .row {
-      min-width: 500px;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
+      min-width: 500px;
+
+      @media only screen and (max-width: 650px) {
+        min-width: 0;
+      }
 
       .txhash {
         font-size: 16px;
@@ -81,6 +102,9 @@
       .timestamp {
         font-size: 16px;
         color: rgba($color: #000000, $alpha: 0.42);
+        @media only screen and (max-width: 650px) {
+          display: none;
+        }
       }
 
       .method {
@@ -98,6 +122,9 @@
       .gasfee {
         font-size: 16px;
         color: rgba($color: #000000, $alpha: 0.42);
+        @media only screen and (max-width: 650px) {
+          display: none;
+        }
       }
     }
   }

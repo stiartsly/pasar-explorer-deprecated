@@ -6,7 +6,7 @@ export default function TransactionItem(props) {
   return (
     <div className={styles.transactionitem}>
       <img src={props.imageUrl} />
-      <div>
+      <div style={{ width: '100%' }}>
         <div className={styles.row}>
           <div className={styles.txhash}>Tx Hash : {props.txhash}</div>
           <div className={styles.timestamp}>{props.timestamp}</div>

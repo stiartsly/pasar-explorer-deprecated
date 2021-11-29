@@ -6,7 +6,7 @@ export default function CollectibleItem(props) {
   return (
     <div className={styles.collectibleitem}>
       <img src={props.imageUrl} />
-      <div>
+      <div style={{ width: '100%' }}>
         <div className={styles.row}>
           <div className={styles.title}>{props.title}</div>
           <div className={styles.timestamp}>{props.timestamp}</div>

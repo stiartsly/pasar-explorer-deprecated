@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+.mobileMenu {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: none;
+  cursor: pointer;
+  @media only screen and (max-width: 800px) {
+    display: block;
+  }
+}
+
+.mobileShow {
+  display: block !important;
+}
+
 .navbarContainer {
   width: calc(100% - 200px);
   padding: 20px 100px;
@@ -8,10 +23,22 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-
+  @media only screen and (max-width: 800px) {
+    display: none;
+  }
   .navsWrapper {
     display: flex;
     align-items: center;
+    @media only screen and (max-width: 800px) {
+      position: absolute;
+      flex-direction: column;
+      top: 0;
+      left: 0;
+      background-color: #ffffff;
+      width: 100%;
+      padding: 10px 0;
+      display: none;
+    }
 
     a {
       all: initial;
@@ -21,6 +48,9 @@
       cursor: pointer;
       height: 30px;
       margin: 0 30px;
+      @media only screen and (max-width: 800px) {
+        padding: 10px 0;
+      }
 
       span {
         font-family: 'Roboto', sans-serif;
@@ -36,16 +66,19 @@
 
     .loginWrapper {
       padding-left: 50px;
-    }
-  }
-
-  .socialWrapper {
-    img {
-      margin: 0 10px;
+      @media only screen and (max-width: 800px) {
+        padding: 10px 0;
+      }
     }
   }
 }
 
 .logoWrapper {
   text-align: center;
+  @media only screen and (max-width: 1300px) {
+    padding-top: 50px;
+  }
+  @media only screen and (max-width: 400px) {
+    width: 100%;
+  }
 }

@@ -5,8 +5,39 @@
   background-color: #c4c4c4;
   padding: 50px;
 
+  img {
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+      transition: transform 0.3s;
+    }
+
+    &:active {
+      transform: scale(0.99);
+    }
+  }
+
+  .themeToggle {
+    .dark {
+      background-color: #000000;
+      border-radius: 25px;
+      transition: padding-left 0.3s linear, padding-right 0.3s linear;
+      padding-left: 0;
+      padding-right: 46px;
+    }
+
+    .light {
+      background-color: #555555;
+      border-radius: 25px;
+      transition: padding-left 0.3s linear, padding-right 0.3s linear;
+      padding-left: 46px;
+      padding-right: 0;
+    }
+  }
+
   .row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 

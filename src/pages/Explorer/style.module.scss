@@ -8,5 +8,10 @@
 
   .dashboard {
     display: flex;
+    flex-wrap: wrap;
+
+    .rowContainer {
+      width: 100%;
+    }
   }
 }

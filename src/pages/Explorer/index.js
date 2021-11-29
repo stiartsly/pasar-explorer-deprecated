@@ -1,9 +1,9 @@
 import React from 'react';
 import SearchBox from '../../components/SearchBox';
 import Overview from '../../components/Overview';
-import ListBox from '../../components/ListBox';
-import CollectibleItem from '../../components/ListBox/CollectibleItem';
-import TransactionItem from '../../components/ListBox/TransactionItem';
+import ListCard from '../../components/ListCard';
+import CollectibleItem from '../../components/ListCard/CollectibleItem';
+import TransactionItem from '../../components/ListCard/TransactionItem';
 import Divide from '../../components/Divide';
 import * as styles from './style.module.scss';
 
@@ -15,12 +15,12 @@ export default function Explorer() {
       <SearchBox />
       <Overview />
       <div className={styles.dashboard}>
-        <ListBox title="Newest Collectibles">
+        <ListCard title="Newest Collectibles">
           {newestCollectibles.map((item, index) => {
             return (
               <>
                 <CollectibleItem
-                  key={index}
+                  key={`collectible${index}`}
                   imageUrl={item.imageUrl}
                   title={item.title}
                   timestamp={item.timestamp}
@@ -31,13 +31,13 @@ export default function Explorer() {
               </>
             );
           })}
-        </ListBox>
-        <ListBox title="Latest Transactions">
+        </ListCard>
+        <ListCard title="Latest Transactions">
           {latestTransactions.map((item, index) => {
             return (
               <>
                 <TransactionItem
-                  key={index}
+                  key={`transaction${index}`}
                   imageUrl={item.imageUrl}
                   txhash={item.txhash}
                   timestamp={item.timestamp}
@@ -48,7 +48,7 @@ export default function Explorer() {
               </>
             );
           })}
-        </ListBox>
+        </ListCard>
       </div>
     </div>
   );
