@@ -1,0 +1,41 @@
+.footer {
+  color: rgba($color: #000000, $alpha: 0.42);
+  display: flex;
+  flex-direction: column;
+  background-color: #c4c4c4;
+  padding: 50px;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .social {
+    display: flex;
+    align-items: center;
+
+    .gototop {
+      margin: 0 50px;
+    }
+  }
+
+  .column {
+    img {
+      margin: 10px;
+    }
+  }
+
+  .divide {
+    width: 100%;
+    height: 0;
+    border-bottom: 1px solid #d4d4d4;
+    margin: 20px 0;
+  }
+
+  .boldtext {
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+}

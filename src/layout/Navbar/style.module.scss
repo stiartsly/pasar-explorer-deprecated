@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.navbarContainer {
+  width: calc(100% - 200px);
+  padding: 20px 100px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .navsWrapper {
+    display: flex;
+    align-items: center;
+
+    a {
+      all: initial;
+      display: flex;
+      font-size: 20px;
+      position: relative;
+      cursor: pointer;
+      height: 30px;
+      margin: 0 30px;
+
+      span {
+        font-family: 'Roboto', sans-serif;
+        color: rgba($color: #000000, $alpha: 0.42);
+      }
+    }
+
+    .active {
+      span {
+        color: rgba($color: #000000, $alpha: 1);
+      }
+    }
+
+    .loginWrapper {
+      padding-left: 50px;
+    }
+  }
+
+  .socialWrapper {
+    img {
+      margin: 0 10px;
+    }
+  }
+}
+
+.logoWrapper {
+  text-align: center;
+}
