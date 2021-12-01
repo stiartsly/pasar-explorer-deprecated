@@ -8,7 +8,7 @@ export default function SeemoreListCard(props) {
       <div className={styles.header}>
         <div className={styles.title}>{props.title}</div>
         <div className={styles.pagenation}>
-          <div className={styles.pageNum}>Page 1 of 100</div>
+          <div className={styles.pageNum}>Page 1 of {props.pages}</div>
         </div>
       </div>
       {props.children}
@@ -24,4 +24,5 @@ SeemoreListCard.propTypes = {
     PropTypes.element,
   ]),
   title: PropTypes.string,
+  pages: PropTypes.number,
 };

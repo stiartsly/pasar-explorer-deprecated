@@ -8,21 +8,19 @@ export default function TransactionItem(props) {
       <img src={props.imageUrl} />
       <div style={{ width: '100%' }}>
         <div className={styles.row}>
-          <div className={styles.col}>
-            <div className={styles.title}>Tx Hash</div>
-            <div className={styles.value}>{props.txhash}</div>
+          <div className={styles.col_name}>
+            <div className={styles.title}>Name</div>
+            <div className={styles.value}>{props.name}</div>
           </div>
-          <div className={styles.col}>
-            <div className={styles.method}>
-              <div className={styles.title}>Method</div>
-              <div className={styles.value}>{props.method}</div>
-            </div>
+          <div className={styles.col_description}>
+            <div className={styles.title}>description</div>
+            <div className={styles.value}>{props.description}</div>
           </div>
-          <div className={styles.col}>
-            <div className={styles.title}>Gas Fee</div>
-            <div className={styles.value}>{props.gasfee}</div>
+          <div className={styles.col_owner}>
+            <div className={styles.title}>Owner</div>
+            <div className={styles.value}>{props.owner}</div>
           </div>
-          <div className={styles.col}>
+          <div className={styles.col_date}>
             <div className={styles.title}>Date</div>
             <div className={styles.value}>{props.timestamp}</div>
           </div>
@@ -35,8 +33,8 @@ export default function TransactionItem(props) {
 TransactionItem.propTypes = {
   props: PropTypes.object,
   imageUrl: PropTypes.string,
-  txhash: PropTypes.string,
+  name: PropTypes.string,
   timestamp: PropTypes.string,
-  method: PropTypes.string,
-  gasfee: PropTypes.string,
+  description: PropTypes.string,
+  owner: PropTypes.string,
 };
