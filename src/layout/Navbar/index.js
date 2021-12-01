@@ -20,15 +20,20 @@ export default function Navbar() {
             ' '
           )}
         >
-          {routes.map((route, index) => (
-            <Link
-              key={index}
-              to={route.path}
-              className={location.pathname == route.path ? styles.active : null}
-            >
-              <span>{route.title}</span>
-            </Link>
-          ))}
+          {routes.map(
+            (route, index) =>
+              route.title && (
+                <Link
+                  key={index}
+                  to={route.path}
+                  className={
+                    location.pathname == route.path ? styles.active : null
+                  }
+                >
+                  <span>{route.title}</span>
+                </Link>
+              )
+          )}
           <StandardButton title="Sign In" />
         </div>
       </div>
@@ -44,9 +49,6 @@ export default function Navbar() {
             onClick={() => setMobileMenu(true)}
           />
         )}
-      </div>
-      <div className={styles.logoWrapper}>
-        <img alt="logo" src="image/Pasar.svg" width="360px" />
       </div>
     </>
   );

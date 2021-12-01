@@ -5,6 +5,7 @@ export const newestCollectibles = [
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
     gasfee: '0.0031464 ELA',
+    value: 0.02,
   },
   {
     imageUrl: 'image/Data Droidz.svg',
@@ -12,6 +13,7 @@ export const newestCollectibles = [
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
     gasfee: '0.0031464 ELA',
+    value: 0.02,
   },
   {
     imageUrl: 'image/Bunny Punk.svg',
@@ -19,6 +21,7 @@ export const newestCollectibles = [
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
     gasfee: '0.0031464 ELA',
+    value: 0.02,
   },
   {
     imageUrl: 'image/Elastos Apes.svg',
@@ -26,6 +29,7 @@ export const newestCollectibles = [
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
     gasfee: '0.0031464 ELA',
+    value: 0.02,
   },
   {
     imageUrl: 'image/Ela Nugz.svg',
@@ -33,6 +37,7 @@ export const newestCollectibles = [
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
     gasfee: '0.0031464 ELA',
+    value: 0.02,
   },
 ];
 
@@ -43,6 +48,7 @@ export const latestTransactions = [
     timestamp: '1m ago',
     method: 'Transfer',
     gasfee: '0.0031464 ELA',
+    value: 0.02,
   },
   {
     imageUrl: 'image/Data Droidz.svg',
@@ -50,6 +56,7 @@ export const latestTransactions = [
     timestamp: '1m ago',
     method: 'Transfer',
     gasfee: '0.0031464 ELA',
+    value: 0.02,
   },
   {
     imageUrl: 'image/Bunny Punk.svg',
@@ -57,6 +64,7 @@ export const latestTransactions = [
     timestamp: '1m ago',
     method: 'Transfer',
     gasfee: '0.0031464 ELA',
+    value: 0.02,
   },
   {
     imageUrl: 'image/Elastos Apes.svg',
@@ -64,6 +72,7 @@ export const latestTransactions = [
     timestamp: '1m ago',
     method: 'Transfer',
     gasfee: '0.0031464 ELA',
+    value: 0.02,
   },
   {
     imageUrl: 'image/Ela Nugz.svg',
@@ -71,5 +80,6 @@ export const latestTransactions = [
     timestamp: '1m ago',
     method: 'Transfer',
     gasfee: '0.0031464 ELA',
+    value: 0.02,
   },
 ];

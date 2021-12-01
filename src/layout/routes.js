@@ -1,5 +1,6 @@
 import React from 'react';
 import Explorer from '../pages/Explorer';
+import Seemore from '../pages/Seemore';
 
 export const routes = [
   {
@@ -7,6 +8,12 @@ export const routes = [
     path: '/',
     exact: true,
     body: () => <Explorer />,
+  },
+  {
+    title: '',
+    path: '/seemore/:type',
+    exact: true,
+    body: () => <Seemore />,
   },
   {
     title: 'Marketplace',

@@ -12,6 +12,9 @@ import { newestCollectibles, latestTransactions } from '../../mockdata';
 export default function Explorer() {
   return (
     <div className={styles.container}>
+      <div className={styles.logoWrapper}>
+        <img alt="logo" src="image/Pasar.svg" width="360px" />
+      </div>
       <SearchBox />
       <Overview />
       <div className={styles.dashboard}>

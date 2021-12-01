@@ -1,0 +1,106 @@
+.listbox {
+  margin: 10px;
+  color: #000000;
+  margin: 0 200px;
+  padding: 0 100px;
+  width: 100%;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    .title {
+      font-size: 26px;
+      color: #000000;
+    }
+
+    .pageNum {
+      font-size: 16px;
+      color: #ffffff;
+      background-color: #000000;
+      border-radius: 18px;
+      padding: 10px;
+    }
+  }
+
+  .collectibleitem {
+    border: 1px solid #d4d4d4;
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+
+    img {
+      margin-right: 20px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      min-width: 500px;
+
+      @media only screen and (max-width: 650px) {
+        min-width: 0;
+      }
+
+      .col {
+        width: 20%;
+      }
+
+      .title {
+        font-size: 16px;
+        color: #000000;
+        padding: 5px 0;
+      }
+
+      .value {
+        font-size: 16px;
+        color: rgba($color: #000000, $alpha: 0.42);
+        padding: 5px 0;
+      }
+    }
+  }
+
+  .transactionitem {
+    border: 1px solid #d4d4d4;
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+
+    img {
+      margin-right: 20px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      min-width: 500px;
+
+      @media only screen and (max-width: 650px) {
+        min-width: 0;
+      }
+
+      .col {
+        width: 25%;
+      }
+
+      .title {
+        font-size: 16px;
+        color: #000000;
+        padding: 5px 0;
+      }
+
+      .value {
+        font-size: 16px;
+        color: rgba($color: #000000, $alpha: 0.42);
+        padding: 5px 0;
+      }
+    }
+  }
+}

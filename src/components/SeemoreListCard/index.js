@@ -1,15 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import * as styles from './style.module.scss';
 import PropTypes from 'prop-types';
 
-export default function ListCard(props) {
+export default function SeemoreListCard(props) {
   return (
     <div className={styles.listbox}>
       <div className={styles.header}>
         <div className={styles.title}>{props.title}</div>
-        <div className={styles.option}>
-          <Link to={`/seemore/${props.title}`}>See more</Link>
+        <div className={styles.pagenation}>
+          <div className={styles.pageNum}>Page 1 of 100</div>
         </div>
       </div>
       {props.children}
@@ -17,7 +16,7 @@ export default function ListCard(props) {
   );
 }
 
-ListCard.propTypes = {
+SeemoreListCard.propTypes = {
   props: PropTypes.object,
   children: PropTypes.oneOfType([
     PropTypes.string,
