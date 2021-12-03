@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .listbox {
   margin: 10px;
   color: #000000;
@@ -32,6 +36,16 @@
     display: flex;
     align-items: center;
     margin: 10px 0;
+
+    &:hover {
+      box-shadow: 2px 2px 5px #999999;
+      transition: box-shadow 0.5s;
+    }
+
+    &:active {
+      box-shadow: 1px 1px 3px #999999;
+      transition: box-shadow 0.5s;
+    }
 
     img {
       margin-right: 20px;

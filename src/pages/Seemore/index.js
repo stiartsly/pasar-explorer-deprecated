@@ -36,13 +36,13 @@ export default function Seemore() {
       <div className={styles.dashboard}>
         {params.type == 'Newest Collectibles' && (
           <SeemoreListCard title="Newest Collectibles" pages={pagesCollectible}>
-            {collectibles.map((item, index) => {
+            {collectibles.map(item => {
               return (
                 <>
                   <CollectibleItem
-                    key={`collectible${index}`}
+                    key={item.collection}
                     imageUrl={item.imageUrl}
-                    title={item.title}
+                    collection={item.collection}
                     timestamp={item.timestamp}
                     tokenid={item.tokenid}
                     gasfee={item.gasfee}
@@ -55,11 +55,11 @@ export default function Seemore() {
         )}
         {params.type == 'Latest Transactions' && (
           <SeemoreListCard title="Latest Transactions" pages={pagesTransaction}>
-            {transactions.map((item, index) => {
+            {transactions.map(item => {
               return (
                 <>
                   <TransactionItem
-                    key={`transaction${index}`}
+                    key={item.name}
                     imageUrl={item.imageUrl}
                     name={item.name}
                     timestamp={item.timestamp}

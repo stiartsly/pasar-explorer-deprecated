@@ -1,7 +1,7 @@
 export const newestCollectibles = [
   {
     imageUrl: 'image/Phantz Club.svg',
-    title: 'Phantz Club',
+    collection: 'Phantz Club',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
     gasfee: '0.0031464 ELA',
@@ -9,7 +9,7 @@ export const newestCollectibles = [
   },
   {
     imageUrl: 'image/Data Droidz.svg',
-    title: 'Data Droidz',
+    collection: 'Data Droidz',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
     gasfee: '0.0031464 ELA',
@@ -17,7 +17,7 @@ export const newestCollectibles = [
   },
   {
     imageUrl: 'image/Bunny Punk.svg',
-    title: 'Bunny Punk',
+    collection: 'Bunny Punk',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
     gasfee: '0.0031464 ELA',
@@ -25,7 +25,7 @@ export const newestCollectibles = [
   },
   {
     imageUrl: 'image/Elastos Apes.svg',
-    title: 'Elastos Apes',
+    collection: 'Elastos Apes',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
     gasfee: '0.0031464 ELA',
@@ -33,7 +33,7 @@ export const newestCollectibles = [
   },
   {
     imageUrl: 'image/Ela Nugz.svg',
-    title: 'Ela Nugz',
+    collection: 'Ela Nugz',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
     gasfee: '0.0031464 ELA',
@@ -41,7 +41,7 @@ export const newestCollectibles = [
   },
   {
     imageUrl: 'image/Phantz Club.svg',
-    title: 'Phantz Club',
+    collection: 'Phantz Club',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
     gasfee: '0.0031464 ELA',
@@ -49,7 +49,7 @@ export const newestCollectibles = [
   },
   {
     imageUrl: 'image/Data Droidz.svg',
-    title: 'Data Droidz',
+    collection: 'Data Droidz',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
     gasfee: '0.0031464 ELA',
@@ -57,7 +57,7 @@ export const newestCollectibles = [
   },
   {
     imageUrl: 'image/Bunny Punk.svg',
-    title: 'Bunny Punk',
+    collection: 'Bunny Punk',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
     gasfee: '0.0031464 ELA',
@@ -65,7 +65,7 @@ export const newestCollectibles = [
   },
   {
     imageUrl: 'image/Elastos Apes.svg',
-    title: 'Elastos Apes',
+    collection: 'Elastos Apes',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
     gasfee: '0.0031464 ELA',
@@ -73,7 +73,7 @@ export const newestCollectibles = [
   },
   {
     imageUrl: 'image/Ela Nugz.svg',
-    title: 'Ela Nugz',
+    collection: 'Ela Nugz',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
     gasfee: '0.0031464 ELA',
@@ -81,7 +81,7 @@ export const newestCollectibles = [
   },
   {
     imageUrl: 'image/Phantz Club.svg',
-    title: 'Phantz Club',
+    collection: 'Phantz Club',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
     gasfee: '0.0031464 ELA',
@@ -89,7 +89,7 @@ export const newestCollectibles = [
   },
   {
     imageUrl: 'image/Data Droidz.svg',
-    title: 'Data Droidz',
+    collection: 'Data Droidz',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
     gasfee: '0.0031464 ELA',
@@ -97,7 +97,7 @@ export const newestCollectibles = [
   },
   {
     imageUrl: 'image/Bunny Punk.svg',
-    title: 'Bunny Punk',
+    collection: 'Bunny Punk',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
     gasfee: '0.0031464 ELA',
@@ -105,7 +105,7 @@ export const newestCollectibles = [
   },
   {
     imageUrl: 'image/Elastos Apes.svg',
-    title: 'Elastos Apes',
+    collection: 'Elastos Apes',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
     gasfee: '0.0031464 ELA',
@@ -113,7 +113,7 @@ export const newestCollectibles = [
   },
   {
     imageUrl: 'image/Ela Nugz.svg',
-    title: 'Ela Nugz',
+    collection: 'Ela Nugz',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
     gasfee: '0.0031464 ELA',

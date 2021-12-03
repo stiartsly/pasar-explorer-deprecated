@@ -23,9 +23,9 @@ export default function Explorer() {
             return (
               <>
                 <CollectibleItem
-                  key={`collectible${index}`}
+                  key={item.collection}
                   imageUrl={item.imageUrl}
-                  title={item.title}
+                  collection={item.collection}
                   timestamp={item.timestamp}
                   tokenid={item.tokenid}
                   gasfee={item.gasfee}
@@ -40,7 +40,7 @@ export default function Explorer() {
             return (
               <>
                 <TransactionItem
-                  key={`transaction${index}`}
+                  key={item.txhash}
                   imageUrl={item.imageUrl}
                   txhash={item.txhash}
                   timestamp={item.timestamp}

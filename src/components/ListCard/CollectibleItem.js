@@ -8,7 +8,7 @@ export default function CollectibleItem(props) {
       <img src={props.imageUrl} />
       <div style={{ width: '100%' }}>
         <div className={styles.row}>
-          <div className={styles.title}>{props.title}</div>
+          <div className={styles.title}>{props.collection}</div>
           <div className={styles.timestamp}>{props.timestamp}</div>
         </div>
         <div className={styles.row}>
@@ -23,7 +23,7 @@ export default function CollectibleItem(props) {
 CollectibleItem.propTypes = {
   props: PropTypes.object,
   imageUrl: PropTypes.string,
-  title: PropTypes.string,
+  collection: PropTypes.string,
   timestamp: PropTypes.string,
   tokenid: PropTypes.string,
   gasfee: PropTypes.string,
