@@ -2,6 +2,7 @@ import React from 'react';
 import Explorer from '../pages/Explorer';
 import Seemore from '../pages/Seemore';
 import CollectionDetail from '../pages/CollectionDetail';
+import TransactionDetail from '../pages/TransactionDetail';
 
 export const routes = [
   {
@@ -18,9 +19,15 @@ export const routes = [
   },
   {
     title: '',
-    path: '/seemore/:type/:collection',
+    path: '/seemore/Newest Collectibles/:collection',
     exact: true,
     body: () => <CollectionDetail />,
+  },
+  {
+    title: '',
+    path: '/seemore/Latest Transactions/:address',
+    exact: true,
+    body: () => <TransactionDetail />,
   },
   {
     title: 'Marketplace',

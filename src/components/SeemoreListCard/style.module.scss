@@ -77,60 +77,60 @@ a {
       }
     }
   }
+}
 
-  .transactionitem {
-    border: 1px solid #d4d4d4;
-    border-radius: 20px;
-    background-color: #ffffff;
-    padding: 20px;
+.transactionitem {
+  border: 1px solid #d4d4d4;
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+
+  img {
+    margin-right: 20px;
+  }
+
+  .row {
     display: flex;
-    align-items: center;
-    margin: 10px 0;
+    flex-wrap: wrap;
+    min-width: 500px;
 
-    img {
-      margin-right: 20px;
+    @media only screen and (max-width: 650px) {
+      min-width: 0;
     }
 
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      min-width: 500px;
+    .col_name {
+      width: 20%;
+      text-align: left;
+    }
 
-      @media only screen and (max-width: 650px) {
-        min-width: 0;
-      }
+    .col_description {
+      width: 55%;
+      text-align: center;
+    }
 
-      .col_name {
-        width: 20%;
-        text-align: left;
-      }
+    .col_owner {
+      width: 15%;
+      text-align: center;
+    }
 
-      .col_description {
-        width: 55%;
-        text-align: center;
-      }
+    .col_date {
+      width: 10%;
+      text-align: center;
+    }
 
-      .col_owner {
-        width: 15%;
-        text-align: center;
-      }
+    .title {
+      font-size: 16px;
+      color: #000000;
+      padding: 5px 0;
+    }
 
-      .col_date {
-        width: 10%;
-        text-align: center;
-      }
-
-      .title {
-        font-size: 16px;
-        color: #000000;
-        padding: 5px 0;
-      }
-
-      .value {
-        font-size: 16px;
-        color: rgba($color: #000000, $alpha: 0.42);
-        padding: 5px 0;
-      }
+    .value {
+      font-size: 16px;
+      color: rgba($color: #000000, $alpha: 0.42);
+      padding: 5px 0;
     }
   }
 }

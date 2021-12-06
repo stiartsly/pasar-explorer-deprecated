@@ -15,7 +15,7 @@ export default function Explorer() {
       <div className={styles.logoWrapper}>
         <img alt="logo" src="image/Pasar.svg" width="360px" />
       </div>
-      <SearchBox />
+      <SearchBox placeholder="Search by name/contract/address/token ID" />
       <Overview />
       <div className={styles.dashboard}>
         <ListCard title="Newest Collectibles">
