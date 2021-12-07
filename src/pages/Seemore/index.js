@@ -14,16 +14,24 @@ export default function Seemore() {
   const [recordsPerPage, setRecordPerPage] = useState(25);
   const [collectibles, setCollectibles] = useState(newestCollectibles);
   const [transactions, setTransactions] = useState(latestTransactions);
+  const [pagesNoCollectible, setPagesNoCollectible] = useState(0);
+  const [pagesNoTransaction, setPagesNoTransaction] = useState(0);
   const [pagesCollectible, setPagesCollectible] = useState();
   const [pagesTransaction, setPagesTransaction] = useState();
   useEffect(() => {
-    const recordsCollectible = newestCollectibles.slice(0, recordsPerPage);
+    const recordsCollectible = newestCollectibles.slice(
+      pagesNoCollectible * recordsPerPage,
+      pagesNoCollectible * recordsPerPage + recordsPerPage
+    );
     setCollectibles(recordsCollectible);
-    const recordsTransaction = latestTransactions.slice(0, recordsPerPage);
+    const recordsTransaction = latestTransactions.slice(
+      pagesNoTransaction * recordsPerPage,
+      pagesNoTransaction * recordsPerPage + recordsPerPage
+    );
     setTransactions(recordsTransaction);
     setPagesCollectible(Math.ceil(newestCollectibles.length / recordsPerPage));
     setPagesTransaction(Math.ceil(latestTransactions.length / recordsPerPage));
-  }, [recordsPerPage]);
+  }, [recordsPerPage, pagesNoCollectible]);
 
   return (
     <div className={styles.container}>
@@ -35,7 +43,12 @@ export default function Seemore() {
       </div>
       <div className={styles.dashboard}>
         {params.type == 'Newest Collectibles' && (
-          <SeemoreListCard title="Newest Collectibles" pages={pagesCollectible}>
+          <SeemoreListCard
+            title="Newest Collectibles"
+            pages={pagesCollectible}
+            pageNo={pagesNoCollectible}
+            onChangePage={setPagesNoCollectible}
+          >
             {collectibles.map(item => {
               return (
                 <>
@@ -54,7 +67,12 @@ export default function Seemore() {
           </SeemoreListCard>
         )}
         {params.type == 'Latest Transactions' && (
-          <SeemoreListCard title="Latest Transactions" pages={pagesTransaction}>
+          <SeemoreListCard
+            title="Latest Transactions"
+            pages={pagesTransaction}
+            pageNo={pagesNoTransaction}
+            onChangePage={setPagesNoTransaction}
+          >
             {transactions.map(item => {
               return (
                 <>
