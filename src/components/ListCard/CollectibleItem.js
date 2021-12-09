@@ -5,15 +5,15 @@ import PropTypes from 'prop-types';
 export default function CollectibleItem(props) {
   return (
     <div className={styles.collectibleitem}>
-      <img src={props.imageUrl} />
+      <img src={props.thumbnail} width="50px" />
       <div style={{ width: '100%' }}>
         <div className={styles.row}>
-          <div className={styles.title}>{props.collection}</div>
+          <div className={styles.name}>{props.name}</div>
           <div className={styles.timestamp}>{props.timestamp}</div>
         </div>
         <div className={styles.row}>
-          <div className={styles.tokenid}>Token ID : {props.tokenid}</div>
-          <div className={styles.gasfee}>Gas Fee : {props.gasfee}</div>
+          <div className={styles.tokenIdHex}>Token ID : {props.tokenIdHex}</div>
+          <div className={styles.gasfee}>Gas Fee : {props.gasfee}&nbsp;ELA</div>
         </div>
       </div>
     </div>
@@ -22,9 +22,9 @@ export default function CollectibleItem(props) {
 
 CollectibleItem.propTypes = {
   props: PropTypes.object,
-  imageUrl: PropTypes.string,
-  collection: PropTypes.string,
+  name: PropTypes.string,
   timestamp: PropTypes.string,
-  tokenid: PropTypes.string,
+  tokenIdHex: PropTypes.string,
+  thumbnail: PropTypes.string,
   gasfee: PropTypes.string,
 };
