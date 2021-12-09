@@ -13,7 +13,7 @@ export default function Explorer() {
   return (
     <div className={styles.container}>
       <div className={styles.logoWrapper}>
-        <img alt="logo" src="image/Pasar.svg" width="360px" />
+        <img alt="logo" src="/image/Pasar.svg" width="360px" />
       </div>
       <SearchBox placeholder="Search by name/contract/address/token ID" />
       <Overview />

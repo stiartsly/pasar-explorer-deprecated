@@ -17,11 +17,11 @@ export default function CollectionDetail() {
         </div>
         <h1>Collectible Assets</h1>
         <div className={styles.assetContainer}>
-          <img src="image/Collectible Asset 1.svg" />
+          <img src="/image/Collectible Asset 1.svg" />
           <div className={styles.collectibleDetails}>
             <h1>Collectible Details</h1>
             <div className={styles.detailItem}>
-              <img src="image/Collection Details Name.svg" />
+              <img src="/image/Collectible Details Name.svg" />
               <div className={styles.dataWrapper}>
                 <h3>Name</h3>
                 <div>Phantz Club</div>
@@ -29,7 +29,7 @@ export default function CollectionDetail() {
             </div>
             <div className={styles.divider} />
             <div className={styles.detailItem}>
-              <img src="image/Collectible Details Description.svg" />
+              <img src="/image/Collectible Details Description.svg" />
               <div className={styles.dataWrapper}>
                 <h3>Description</h3>
                 <div>2822 unique collectibles on the blockchain</div>
@@ -37,7 +37,7 @@ export default function CollectionDetail() {
             </div>
             <div className={styles.divider} />
             <div className={styles.detailItem}>
-              <img src="image/Collectible Details Creator.svg" />
+              <img src="/image/Collectible Details Creator.svg" />
               <div className={styles.dataWrapper}>
                 <h3>Creator</h3>
                 <div>0x651s...shslf</div>
@@ -45,7 +45,7 @@ export default function CollectionDetail() {
             </div>
             <div className={styles.divider} />
             <div className={styles.detailItem}>
-              <img src="image/Collectible Details Owner.svg" />
+              <img src="/image/Collectible Details Owner.svg" />
               <div className={styles.dataWrapper}>
                 <h3>Owner</h3>
                 <div>0x243s...GTghdS</div>
@@ -53,7 +53,7 @@ export default function CollectionDetail() {
             </div>
             <div className={styles.divider} />
             <div className={styles.detailItem}>
-              <img src="image/Collectible Details Contact Address.svg" />
+              <img src="/image/Collectible Details Contact Address.svg" />
               <div className={styles.dataWrapper}>
                 <h3>Contract Address</h3>
                 <div>0x651sdfddfsfs...shslf</div>

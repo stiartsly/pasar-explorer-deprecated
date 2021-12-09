@@ -9,7 +9,7 @@ export default function SelectRecords({ value, onChange }) {
       <div className={styles.selectBox}>
         <div className={styles.selectWrapper}>
           <span>{value}</span>
-          <img src="image/Select Down Arrow.svg" />
+          <img src="/image/Select Down Arrow.svg" />
         </div>
         <div className={styles.selectList}>
           <div

@@ -5,7 +5,7 @@ import * as styles from './transaction.module.scss';
 export default function TransactionRecord() {
   return (
     <div className={styles.transactionitem}>
-      <img src="image/Collectible Details Creator.svg" />
+      <img src="/image/Collectible Details Creator.svg" />
       <div style={{ width: '100%' }}>
         <div className={styles.row}>
           <div className={styles.col_creator}>

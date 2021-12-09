@@ -17,18 +17,18 @@ export default function Footer() {
         <div className={styles.row}>
           <div className={styles.column}>
             <div className={styles.social}>
-              <img src="image/Telegram.svg" />
-              <img src="image/Twitter.svg" />
-              <img src="image/Discord.svg" />
+              <img src="/image/Telegram.svg" />
+              <img src="/image/Twitter.svg" />
+              <img src="/image/Discord.svg" />
               <img
-                src="image/Goto Top.svg"
+                src="/image/Goto Top.svg"
                 className={styles.gototop}
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               />
             </div>
             <div className={styles.themeToggle}>
               <img
-                src="image/Dark.svg"
+                src="/image/Dark.svg"
                 className={darkTheme ? styles.light : styles.dark}
                 onClick={() => setDarkTheme(!darkTheme)}
               />

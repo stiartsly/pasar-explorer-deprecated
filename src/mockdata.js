@@ -1,6 +1,6 @@
 export const newestCollectibles = [
   {
-    imageUrl: 'image/Phantz Club.svg',
+    imageUrl: '/image/Phantz Club.svg',
     collection: 'Phantz Club',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
@@ -8,7 +8,7 @@ export const newestCollectibles = [
     value: 0.02,
   },
   {
-    imageUrl: 'image/Data Droidz.svg',
+    imageUrl: '/image/Data Droidz.svg',
     collection: 'Data Droidz',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
@@ -16,7 +16,7 @@ export const newestCollectibles = [
     value: 0.02,
   },
   {
-    imageUrl: 'image/Bunny Punk.svg',
+    imageUrl: '/image/Bunny Punk.svg',
     collection: 'Bunny Punk',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
@@ -24,7 +24,7 @@ export const newestCollectibles = [
     value: 0.02,
   },
   {
-    imageUrl: 'image/Elastos Apes.svg',
+    imageUrl: '/image/Elastos Apes.svg',
     collection: 'Elastos Apes',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
@@ -32,7 +32,7 @@ export const newestCollectibles = [
     value: 0.02,
   },
   {
-    imageUrl: 'image/Ela Nugz.svg',
+    imageUrl: '/image/Ela Nugz.svg',
     collection: 'Ela Nugz',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
@@ -40,7 +40,7 @@ export const newestCollectibles = [
     value: 0.02,
   },
   {
-    imageUrl: 'image/Phantz Club.svg',
+    imageUrl: '/image/Phantz Club.svg',
     collection: 'Phantz Club',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
@@ -48,7 +48,7 @@ export const newestCollectibles = [
     value: 0.02,
   },
   {
-    imageUrl: 'image/Data Droidz.svg',
+    imageUrl: '/image/Data Droidz.svg',
     collection: 'Data Droidz',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
@@ -56,7 +56,7 @@ export const newestCollectibles = [
     value: 0.02,
   },
   {
-    imageUrl: 'image/Bunny Punk.svg',
+    imageUrl: '/image/Bunny Punk.svg',
     collection: 'Bunny Punk',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
@@ -64,7 +64,7 @@ export const newestCollectibles = [
     value: 0.02,
   },
   {
-    imageUrl: 'image/Elastos Apes.svg',
+    imageUrl: '/image/Elastos Apes.svg',
     collection: 'Elastos Apes',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
@@ -72,7 +72,7 @@ export const newestCollectibles = [
     value: 0.02,
   },
   {
-    imageUrl: 'image/Ela Nugz.svg',
+    imageUrl: '/image/Ela Nugz.svg',
     collection: 'Ela Nugz',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
@@ -80,7 +80,7 @@ export const newestCollectibles = [
     value: 0.02,
   },
   {
-    imageUrl: 'image/Phantz Club.svg',
+    imageUrl: '/image/Phantz Club.svg',
     collection: 'Phantz Club',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
@@ -88,7 +88,7 @@ export const newestCollectibles = [
     value: 0.02,
   },
   {
-    imageUrl: 'image/Data Droidz.svg',
+    imageUrl: '/image/Data Droidz.svg',
     collection: 'Data Droidz',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
@@ -96,7 +96,7 @@ export const newestCollectibles = [
     value: 0.02,
   },
   {
-    imageUrl: 'image/Bunny Punk.svg',
+    imageUrl: '/image/Bunny Punk.svg',
     collection: 'Bunny Punk',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
@@ -104,7 +104,7 @@ export const newestCollectibles = [
     value: 0.02,
   },
   {
-    imageUrl: 'image/Elastos Apes.svg',
+    imageUrl: '/image/Elastos Apes.svg',
     collection: 'Elastos Apes',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
@@ -112,7 +112,7 @@ export const newestCollectibles = [
     value: 0.02,
   },
   {
-    imageUrl: 'image/Ela Nugz.svg',
+    imageUrl: '/image/Ela Nugz.svg',
     collection: 'Ela Nugz',
     timestamp: '1m ago',
     tokenid: '0x651s...shslf',
@@ -124,7 +124,7 @@ export const newestCollectibles = [
 export const latestTransactions = [
   {
     name: 'Data Droidz #001',
-    imageUrl: 'image/Phantz Club.svg',
+    imageUrl: '/image/Phantz Club.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -137,7 +137,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #002',
-    imageUrl: 'image/Data Droidz.svg',
+    imageUrl: '/image/Data Droidz.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -150,7 +150,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #003',
-    imageUrl: 'image/Bunny Punk.svg',
+    imageUrl: '/image/Bunny Punk.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -163,7 +163,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #004',
-    imageUrl: 'image/Elastos Apes.svg',
+    imageUrl: '/image/Elastos Apes.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -176,7 +176,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #005',
-    imageUrl: 'image/Ela Nugz.svg',
+    imageUrl: '/image/Ela Nugz.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -189,7 +189,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #001',
-    imageUrl: 'image/Phantz Club.svg',
+    imageUrl: '/image/Phantz Club.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -202,7 +202,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #002',
-    imageUrl: 'image/Data Droidz.svg',
+    imageUrl: '/image/Data Droidz.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -215,7 +215,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #003',
-    imageUrl: 'image/Bunny Punk.svg',
+    imageUrl: '/image/Bunny Punk.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -228,7 +228,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #004',
-    imageUrl: 'image/Elastos Apes.svg',
+    imageUrl: '/image/Elastos Apes.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -241,7 +241,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #005',
-    imageUrl: 'image/Ela Nugz.svg',
+    imageUrl: '/image/Ela Nugz.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -254,7 +254,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #001',
-    imageUrl: 'image/Phantz Club.svg',
+    imageUrl: '/image/Phantz Club.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -267,7 +267,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #002',
-    imageUrl: 'image/Data Droidz.svg',
+    imageUrl: '/image/Data Droidz.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -280,7 +280,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #003',
-    imageUrl: 'image/Bunny Punk.svg',
+    imageUrl: '/image/Bunny Punk.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -293,7 +293,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #004',
-    imageUrl: 'image/Elastos Apes.svg',
+    imageUrl: '/image/Elastos Apes.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -306,7 +306,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #005',
-    imageUrl: 'image/Ela Nugz.svg',
+    imageUrl: '/image/Ela Nugz.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -319,7 +319,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #001',
-    imageUrl: 'image/Phantz Club.svg',
+    imageUrl: '/image/Phantz Club.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -332,7 +332,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #002',
-    imageUrl: 'image/Data Droidz.svg',
+    imageUrl: '/image/Data Droidz.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -345,7 +345,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #003',
-    imageUrl: 'image/Bunny Punk.svg',
+    imageUrl: '/image/Bunny Punk.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -358,7 +358,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #004',
-    imageUrl: 'image/Elastos Apes.svg',
+    imageUrl: '/image/Elastos Apes.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -371,7 +371,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #005',
-    imageUrl: 'image/Ela Nugz.svg',
+    imageUrl: '/image/Ela Nugz.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -384,7 +384,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #001',
-    imageUrl: 'image/Phantz Club.svg',
+    imageUrl: '/image/Phantz Club.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -397,7 +397,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #002',
-    imageUrl: 'image/Data Droidz.svg',
+    imageUrl: '/image/Data Droidz.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -410,7 +410,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #003',
-    imageUrl: 'image/Bunny Punk.svg',
+    imageUrl: '/image/Bunny Punk.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -423,7 +423,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #004',
-    imageUrl: 'image/Elastos Apes.svg',
+    imageUrl: '/image/Elastos Apes.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',
@@ -436,7 +436,7 @@ export const latestTransactions = [
   },
   {
     name: 'Data Droidz #005',
-    imageUrl: 'image/Ela Nugz.svg',
+    imageUrl: '/image/Ela Nugz.svg',
     txhash: '0x651sdfddfsfs...shslf',
     timestamp: '9d ago',
     method: 'Transfer',

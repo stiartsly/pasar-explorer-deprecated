@@ -40,12 +40,12 @@ export default function Navbar() {
       <div className={styles.mobileMenu}>
         {mobileMenu ? (
           <img
-            src="image/icons8-close-window-50.png"
+            src="/image/icons8-close-window-50.png"
             onClick={() => setMobileMenu(false)}
           />
         ) : (
           <img
-            src="image/icons8-menu.svg"
+            src="/image/icons8-menu.svg"
             onClick={() => setMobileMenu(true)}
           />
         )}

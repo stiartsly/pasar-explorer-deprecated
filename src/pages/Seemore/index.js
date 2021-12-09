@@ -36,7 +36,7 @@ export default function Seemore() {
   return (
     <div className={styles.container}>
       <div className={styles.logoWrapper}>
-        <img alt="logo" src="image/Pasar.svg" width="100px" />
+        <img alt="logo" src="/image/Pasar.svg" width="100px" />
       </div>
       <div className={styles.search}>
         <SearchBox />
