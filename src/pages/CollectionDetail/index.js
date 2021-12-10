@@ -7,7 +7,6 @@ import TransactionRecord from './TransactionRecord';
 export default function CollectionDetail() {
   const params = useParams();
   let location = useLocation();
-  console.log(location);
   return (
     <>
       <div className={styles.collectionName}>{params.collection}</div>
@@ -17,7 +16,7 @@ export default function CollectionDetail() {
         </div>
         <h1>Collectible Assets</h1>
         <div className={styles.assetContainer}>
-          <img src="/image/Collectible Asset 1.svg" />
+          <img src={location.state.thumbnail} />
           <div className={styles.collectibleDetails}>
             <h1>Collectible Details</h1>
             <div className={styles.detailItem}>

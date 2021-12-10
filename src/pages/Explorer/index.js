@@ -6,6 +6,7 @@ import CollectibleItem from '../../components/ListCard/CollectibleItem';
 import TransactionItem from '../../components/ListCard/TransactionItem';
 import Divide from '../../components/Divide';
 import * as styles from './style.module.scss';
+import { reduceHexAddress, getTime, getThumbnail } from '../../utils/common';
 
 export default function Explorer() {
   const creator = '0x44016ed8638f5B517a5beC7a722A56d1DEBefef7';
@@ -53,28 +54,6 @@ export default function Explorer() {
         }
       );
   }, []);
-  // Get Abbrevation of hex addres //
-  const reduceHexAddress = strAddress => {
-    return `${strAddress.substring(0, 5)}...${strAddress.substring(
-      strAddress.length - 3,
-      strAddress.length
-    )}`;
-  };
-  // Get time from timestamp //
-  const getTime = timestamp => {
-    return new Intl.DateTimeFormat('en-US', {
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-    }).format(timestamp);
-  };
-  // Get thumbnail url //
-  const getThumbnail = id => {
-    return `https://ipfs0.trinity-feeds.app/ipfs/${id.substring(
-      12,
-      id.length
-    )}`;
-  };
   return (
     <div className={styles.container}>
       <div className={styles.logoWrapper}>

@@ -7,21 +7,21 @@ export default function CollectibleItem(props) {
   return (
     <Link
       to={{
-        pathname: `/seemore/Newest%20Collectibles/${props.collection}`,
+        pathname: `/seemore/Newest%20Collectibles/${props.name}`,
         state: props,
       }}
     >
       <div className={styles.collectibleitem}>
-        <img src={props.imageUrl} />
+        <img src={props.thumbnail} width="70px" />
         <div style={{ width: '100%' }}>
           <div className={styles.row}>
             <div className={styles.col}>
               <div className={styles.title}>Collection</div>
-              <div className={styles.value}>{props.collection}</div>
+              <div className={styles.value}>{props.name}</div>
             </div>
             <div className={styles.col}>
               <div className={styles.title}>Token ID</div>
-              <div className={styles.value}>{props.tokenid}</div>
+              <div className={styles.value}>{props.tokenIdHex}</div>
             </div>
             <div className={styles.col}>
               <div className={styles.title}>Value</div>
@@ -44,10 +44,10 @@ export default function CollectibleItem(props) {
 
 CollectibleItem.propTypes = {
   props: PropTypes.object,
-  imageUrl: PropTypes.string,
-  collection: PropTypes.string,
+  thumbnail: PropTypes.string,
+  name: PropTypes.string,
   timestamp: PropTypes.string,
-  tokenid: PropTypes.string,
+  tokenIdHex: PropTypes.string,
   gasfee: PropTypes.string,
   value: PropTypes.number,
 };
