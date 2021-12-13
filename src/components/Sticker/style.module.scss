@@ -1,0 +1,53 @@
+a {
+  text-decoration: none;
+}
+
+.sticker_container {
+  border: 1px solid #d4d4d4;
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+
+  &:hover {
+    box-shadow: 2px 2px 5px #999999;
+    transition: box-shadow 0.5s;
+  }
+
+  &:active {
+    box-shadow: 1px 1px 3px #999999;
+    transition: box-shadow 0.5s;
+  }
+
+  img {
+    margin-right: 20px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 500px;
+
+    @media only screen and (max-width: 650px) {
+      min-width: 0;
+    }
+
+    .col {
+      width: 20%;
+    }
+
+    .title {
+      font-size: 16px;
+      color: #000000;
+      padding: 5px 0;
+    }
+
+    .value {
+      font-size: 16px;
+      color: rgba($color: #000000, $alpha: 0.42);
+      padding: 5px 0;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './style.module.scss';
+import * as styles from './CollectibleItem.module.scss';
 import PropTypes from 'prop-types';
 
 export default function CollectibleItem(props) {

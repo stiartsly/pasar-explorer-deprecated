@@ -9,7 +9,7 @@ export default function ListCard(props) {
       <div className={styles.header}>
         <div className={styles.title}>{props.title}</div>
         <div className={styles.option}>
-          <Link to={`/seemore/${props.title}`}>See more</Link>
+          <Link to={`/explorer/collectibles`}>See more</Link>
         </div>
       </div>
       {props.children}
