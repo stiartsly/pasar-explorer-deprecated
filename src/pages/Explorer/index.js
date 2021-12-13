@@ -9,51 +9,64 @@ import * as styles from './style.module.scss';
 import { reduceHexAddress, getTime, getThumbnail } from '../../utils/common';
 
 export default function Explorer() {
-  const creator = '0x44016ed8638f5B517a5beC7a722A56d1DEBefef7';
+  // const creator = '0x44016ed8638f5B517a5beC7a722A56d1DEBefef7';
+  const [accounts, setAccounts] = useState([]);
   const [tokens, setTokens] = useState([]);
   const [txs, setTxs] = useState([]);
   const [newestCollectibles, setNewestCollectibles] = useState([]);
   const [latestTransactions, setLatestTransactions] = useState([]);
-  const [error, setError] = useState('');
+  // const [error, setError] = useState('');
   // Fetch Data //
-  useEffect(() => {
-    // Get All(200) Tokens //
-    fetch(
-      `https://assist.trinity-feeds.app/sticker/api/v1/query?creator=${creator}`
-    )
-      .then(res => res.json())
-      .then(
-        result => {
-          const newestFive = result.data.result
-            .sort((a, b) => (a.timestamp > b.timestamp ? 1 : -1))
-            .slice(0, 5);
-          setNewestCollectibles(newestFive);
-          setTokens(result.data.result);
-          console.log(tokens);
-        },
-        error => {
-          setError(error);
-        }
-      );
-    // Get Transactions //
-    fetch(
-      `https://esc.elastos.io/api?module=account&action=txlist&address=${creator}`
-    )
-      .then(res => res.json())
-      .then(
-        data => {
-          const latestFive = data.result
-            .sort((a, b) => (a.timestamp > b.timestamp ? 1 : -1))
-            .slice(0, 5);
-          setLatestTransactions(latestFive);
-          setTxs(data.result);
-          console.log(txs);
-        },
-        error => {
-          setError(error);
-        }
-      );
+  // Get Accounts //
+  useEffect(async () => {
+    const res = await fetch(
+      'https://esc.elastos.io/api?module=account&action=listaccounts'
+    );
+    const data = await res.json();
+    setAccounts(data.result);
   }, []);
+
+  useEffect(async () => {
+    // Get All Tokens & Transactions //
+    let allToken = [];
+    let allTx = [];
+    for (let i = 0; i < accounts.length; i++) {
+      try {
+        const resToken = await fetch(
+          `https://assist.trinity-feeds.app/sticker/api/v1/query?creator=${accounts[i].address}`
+        );
+        const dataToken = await resToken.json();
+        allToken = allToken.concat(dataToken.data.result);
+      } catch (err) {
+        return;
+      }
+      try {
+        const resTx = await fetch(
+          `https://esc.elastos.io/api?module=account&action=txlist&address=${accounts[i].address}`
+        );
+        const dataTx = await resTx.json();
+        allTx = allTx.concat(dataTx.result);
+      } catch (err) {
+        return;
+      }
+    }
+    setTokens(allToken);
+    setTxs(allTx);
+  }, [accounts]);
+
+  useEffect(() => {
+    const newestFive = tokens
+      .sort((a, b) => (a.timestamp > b.timestamp ? 1 : -1))
+      .slice(0, 5);
+    setNewestCollectibles(newestFive);
+  }, [tokens]);
+
+  useEffect(() => {
+    const latestFive = txs
+      .sort((a, b) => (a.timestamp > b.timestamp ? 1 : -1))
+      .slice(0, 5);
+    setLatestTransactions(latestFive);
+  }, [txs]);
   return (
     <div className={styles.container}>
       <div className={styles.logoWrapper}>
@@ -61,7 +74,7 @@ export default function Explorer() {
       </div>
       <SearchBox placeholder="Search by name/contract/address/token ID" />
       <Overview />
-      {error && <div>{error}</div>}
+      {/* {error && <div>{error}</div>} */}
       <div className={styles.dashboard}>
         <ListCard title="Newest Collectibles">
           {newestCollectibles?.map((item, index) => {
