@@ -7,11 +7,11 @@ export const reduceHexAddress = strAddress => {
 };
 // Get time from timestamp //
 export const getTime = timestamp => {
-  return new Intl.DateTimeFormat('en-US', {
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-  }).format(timestamp);
+  const date = new Date(timestamp * 1000);
+  const strDate = `${date.getDate()}/${
+    date.getMonth() + 1
+  }/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+  return strDate;
 };
 // Get thumbnail url //
 export const getThumbnail = id => {

@@ -16,7 +16,7 @@ export default function TransactionItem(props) {
             <span>Method : </span>
             <span className={styles.badge}>{props.method}</span>
           </div>
-          <div className={styles.gasfee}>Gas Fee : {props.gasfee} Gwei</div>
+          <div className={styles.gasfee}>Gas Fee : {props.gasfee} ELA</div>
         </div>
       </div>
     </div>

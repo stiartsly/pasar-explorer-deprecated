@@ -72,7 +72,7 @@ export default function Explorer() {
                   name={item.name}
                   timestamp={getTime(item.timestamp)}
                   tokenIdHex={reduceHexAddress(item.tokenIdHex)}
-                  gasfee={(item.royalties / 10 ** 18).toFixed(13)}
+                  gasfee={0}
                 />
                 {index < newestCollectibles.length - 1 && <Divide />}
               </div>
@@ -87,9 +87,9 @@ export default function Explorer() {
                   key={tx.hash}
                   imageUrl="image/Collectible Details Creator.svg"
                   txhash={reduceHexAddress(tx.hash)}
-                  timestamp={getTime(tx.timestamp)}
+                  timestamp={getTime(tx.timeStamp)}
                   method="Transfer"
-                  gasfee={tx.gasPrice / 10 ** 9}
+                  gasfee={0}
                 />
                 {index < latestTransactions.length - 1 && (
                   <Divide key={index} />
