@@ -1,67 +1,86 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-// import React, { useEffect, useState } from 'react';
 import SearchBox from '../../components/SearchBox';
 import Overview from '../../components/Overview';
-// import ListCard from '../../components/ListCard';
-import CollectibleItem from '../../components/ListCard/CollectibleItem';
-// import TransactionItem from '../../components/ListCard/TransactionItem';
 import Divide from '../../components/Divide';
-import * as styles from './style.module.scss';
+import * as styles from '../../styles/explorer.module.scss';
 import { reduceHexAddress, getTime, getThumbnail } from '../../utils/common';
 
 export default function Explorer() {
-  const [newestCollectibles, setNewestCollectibles] = useState([]);
-  useEffect(async () => {
+  const [newestCollectibles, setNewestCollectibles] = React.useState([]);
+  const [loadingCollectibles, setLoadingCollectibles] = React.useState(false);
+  React.useEffect(async () => {
+    setLoadingCollectibles(true);
     const res = await fetch(
       'https://assist.trinity-feeds.app/sticker/api/v1/listStickers?pageNum=1&pagSize=10'
     );
     const json = await res.json();
-    console.log(json.data.result);
     setNewestCollectibles(json.data.result);
+    setLoadingCollectibles(false);
   }, []);
+
   return (
-    <div className={styles.container}>
-      <div className={styles.logoWrapper}>
-        <img alt="logo" src="/image/Pasar.svg" width="360px" />
-      </div>
-      <SearchBox placeholder="Search by name/contract/address/token ID" />
-      <Overview />
-      <div className={styles.two_columns_container}>
-        <div className={styles.column_container}>
-          <div className={styles.column_header}>
-            <h4>Newest Collectibles</h4>
-            <Link to="/explorer/collectibles">
-              See more
-              <img src="image/Right Arrow.svg" />
-            </Link>
-          </div>
-          <div>
-            {newestCollectibles.map((item, index) => {
-              return (
-                <div key={item.tokenIndex}>
-                  <CollectibleItem
-                    thumbnail={getThumbnail(item.thumbnail)}
-                    name={item.name}
-                    timestamp={getTime(item.createTime)}
-                    tokenIdHex={reduceHexAddress(item.tokenIdHex)}
-                    gasfee={0}
-                  />
-                  {index < newestCollectibles.length - 1 && <Divide />}
-                </div>
-              );
-            })}
-          </div>
+    <div className="page_container">
+      <div className="page_header">
+        <div className={styles.logo}>
+          <img alt="logo" src="/image/Pasar.svg" width="360px" />
         </div>
-        <div className={styles.column_container}>
-          <div className={styles.column_header}>
-            <h4>Latest Collectibles</h4>
-            <Link to="/explorer/transactions">
-              See more
-              <img src="image/Right Arrow.svg" />
-            </Link>
+        <div className={styles.search}>
+          <SearchBox placeholder="Search by name/contract/address/token ID" />
+        </div>
+        <Overview />
+      </div>
+      <div className="page_content">
+        <div className={styles.sticker_container}>
+          {/* Newest Collectibles */}
+          <div className={styles.sticker_list}>
+            <div className={styles.header}>
+              <h1>Newest Collectibles</h1>
+              <Link to="/explorer/collectibles">
+                <span>See more</span>
+                <img src="image/Arrow Right.svg" width="20px" />
+              </Link>
+            </div>
+            <div className={styles.content}>
+              {loadingCollectibles && (
+                <img
+                  src="image/Dual Ring-1s-200px.svg"
+                  className={styles.loading}
+                />
+              )}
+              {newestCollectibles.map((collectible, index) => {
+                return (
+                  <>
+                    <div className={styles.item} key={index}>
+                      <div className={styles.thumb}>
+                        <img src={getThumbnail(collectible.thumbnail)} />
+                      </div>
+                      <table>
+                        <tr>
+                          <td>{collectible.name}</td>
+                          <td>{getTime(collectible.createTime)}</td>
+                        </tr>
+                        <tr>
+                          <td>{reduceHexAddress(collectible.tokenIdHex)}</td>
+                        </tr>
+                      </table>
+                    </div>
+                    {index < newestCollectibles.length - 1 && <Divide />}
+                  </>
+                );
+              })}
+            </div>
           </div>
-          No Transaction
+          {/* Latest Transactions */}
+          <div className={styles.sticker_list}>
+            <div className={styles.header}>
+              <h1>Latest Transactions</h1>
+              <Link to="/explorer/transactions">
+                <span>See more</span>
+                <img src="image/Arrow Right.svg" width="20px" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>
