@@ -36,7 +36,7 @@ export default function StickersList() {
         </div>
         <div className={styles.content}>
           {loading && (
-            <img src="image/Dual Ring-1s.svg" className={styles.loading} />
+            <img src="/image/Dual Ring-1s.svg" className={styles.loading} />
           )}
           {stickers.map(item => {
             return (
@@ -46,7 +46,7 @@ export default function StickersList() {
                   name={item.name}
                   timestamp={getTime(item.createTime)}
                   tokenIdHex={reduceHexAddress(item.tokenIdHex)}
-                  gasfee={(item.royalties / 10 ** 18).toFixed(13)}
+                  gasfee={0}
                   value={item.value}
                 />
               </>

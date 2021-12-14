@@ -21,33 +21,43 @@ a {
     transition: box-shadow 0.5s;
   }
 
-  img {
+  .thumb {
+    width: 70px;
+    height: 70px;
     margin-right: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
   }
 
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    min-width: 500px;
+  table {
+    width: 100%;
+    color: black;
 
-    @media only screen and (max-width: 650px) {
-      min-width: 0;
+    td:nth-child(1) {
+      width: 300px;
     }
 
-    .col {
-      width: 20%;
+    td:nth-child(2) {
+      width: 200px;
     }
 
-    .title {
-      font-size: 16px;
-      color: #000000;
-      padding: 5px 0;
+    td:nth-child(3),
+    td:nth-child(4) {
+      width: 150px;
     }
 
-    .value {
-      font-size: 16px;
-      color: rgba($color: #000000, $alpha: 0.42);
-      padding: 5px 0;
+    th:nth-child(1),
+    th:nth-child(3),
+    th:nth-child(4) {
+      text-align: left;
+    }
+
+    td:nth-child(2) {
+      text-align: center;
     }
   }
 }
