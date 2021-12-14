@@ -43,32 +43,30 @@ export default function Explorer() {
             </div>
             <div className={styles.content}>
               {loadingCollectibles && (
-                <img
-                  src="image/Dual Ring-1s-200px.svg"
-                  className={styles.loading}
-                />
+                <img src="image/Dual Ring-1s.svg" className={styles.loading} />
               )}
-              {newestCollectibles.map((collectible, index) => {
-                return (
-                  <>
-                    <div className={styles.item} key={index}>
-                      <div className={styles.thumb}>
-                        <img src={getThumbnail(collectible.thumbnail)} />
+              {!loadingCollectibles &&
+                newestCollectibles.map((collectible, index) => {
+                  return (
+                    <>
+                      <div className={styles.item} key={index}>
+                        <div className={styles.thumb}>
+                          <img src={getThumbnail(collectible.thumbnail)} />
+                        </div>
+                        <table>
+                          <tr>
+                            <td>{collectible.name}</td>
+                            <td>{getTime(collectible.createTime)}</td>
+                          </tr>
+                          <tr>
+                            <td>{reduceHexAddress(collectible.tokenIdHex)}</td>
+                          </tr>
+                        </table>
                       </div>
-                      <table>
-                        <tr>
-                          <td>{collectible.name}</td>
-                          <td>{getTime(collectible.createTime)}</td>
-                        </tr>
-                        <tr>
-                          <td>{reduceHexAddress(collectible.tokenIdHex)}</td>
-                        </tr>
-                      </table>
-                    </div>
-                    {index < newestCollectibles.length - 1 && <Divide />}
-                  </>
-                );
-              })}
+                      {index < newestCollectibles.length - 1 && <Divide />}
+                    </>
+                  );
+                })}
             </div>
           </div>
           {/* Latest Transactions */}

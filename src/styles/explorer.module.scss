@@ -48,8 +48,12 @@
     }
 
     .content {
+      position: relative;
+      min-height: 200px;
       .loading {
-        margin: auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
       }
 
       .item {
