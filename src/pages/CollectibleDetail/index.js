@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import * as styles from './style.module.scss';
 import TransactionGraph from '../../components/TransactionGraph';
 import TransactionRecord from './TransactionRecord';
+import { getThumbnail } from '../../utils/common';
 
-export default function CollectionDetail() {
+export default function CollectibleDetail() {
   const params = useParams();
   let location = useLocation();
+  const [thumbLoaded, setThumbLoaded] = useState(false);
   return (
     <>
       <div className={styles.collectionName}>{params.collection}</div>
@@ -16,14 +18,25 @@ export default function CollectionDetail() {
         </div>
         <h1>Collectible Assets</h1>
         <div className={styles.assetContainer}>
-          <img src={location.state.thumbnail} />
+          {!thumbLoaded && (
+            <img src="/image/Dual Ring-1s.svg" className={styles.loading} />
+          )}
+          <img
+            style={thumbLoaded ? {} : { display: 'none' }}
+            src={getThumbnail(location.state.thumbnail)}
+            onLoad={() =>
+              setTimeout(function () {
+                setThumbLoaded(true);
+              }, 500)
+            }
+          />
           <div className={styles.collectibleDetails}>
             <h1>Collectible Details</h1>
             <div className={styles.detailItem}>
               <img src="/image/Collectible Details Name.svg" />
               <div className={styles.dataWrapper}>
                 <h3>Name</h3>
-                <div>Phantz Club</div>
+                <div>{location.state.name}</div>
               </div>
             </div>
             <div className={styles.divider} />
@@ -31,7 +44,7 @@ export default function CollectionDetail() {
               <img src="/image/Collectible Details Description.svg" />
               <div className={styles.dataWrapper}>
                 <h3>Description</h3>
-                <div>2822 unique collectibles on the blockchain</div>
+                <div>{location.state.description}</div>
               </div>
             </div>
             <div className={styles.divider} />

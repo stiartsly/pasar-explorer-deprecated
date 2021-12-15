@@ -43,7 +43,7 @@ export default function Explorer() {
             </div>
             <div className={styles.content}>
               {loadingCollectibles && (
-                <img src="image/Dual Ring-1s.svg" className={styles.loading} />
+                <img src="/image/Dual Ring-1s.svg" className={styles.loading} />
               )}
               {!loadingCollectibles &&
                 newestCollectibles.map((collectible, index) => {

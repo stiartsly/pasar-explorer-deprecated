@@ -54,7 +54,7 @@ const data = [
   },
 ];
 
-export default function CollectionDetailt() {
+export default function CollectibleDetail() {
   return (
     <LineChart
       width={1000}

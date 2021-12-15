@@ -27,6 +27,11 @@
     align-items: center;
     height: fit-content;
 
+    .loading {
+      align-self: center;
+      margin: auto;
+    }
+
     img {
       max-width: 550px;
     }

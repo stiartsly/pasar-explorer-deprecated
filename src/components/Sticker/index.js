@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import * as styles from './style.module.scss';
 import PropTypes from 'prop-types';
+import { reduceHexAddress, getTime, getThumbnail } from '../../utils/common';
 
-export default function Sticker(props) {
+export default function Sticker({ props }) {
   return (
     <Link
       to={{
@@ -13,7 +14,7 @@ export default function Sticker(props) {
     >
       <div className={styles.sticker_container}>
         <div className={styles.thumb}>
-          <img src={props.thumbnail} />
+          <img src={getThumbnail(props.thumbnail)} />
         </div>
         <table>
           <thead>
@@ -26,10 +27,10 @@ export default function Sticker(props) {
           <tbody>
             <tr>
               <td>{props.name}</td>
-              <td>{props.tokenIdHex}</td>
+              <td>{reduceHexAddress(props.tokenIdHex)}</td>
               <td>{props.value}</td>
               <td>{props.gasfee}&nbsp;ELA</td>
-              <td>{props.timestamp}</td>
+              <td>{getTime(props.createTime)}</td>
             </tr>
           </tbody>
         </table>
@@ -42,7 +43,7 @@ Sticker.propTypes = {
   props: PropTypes.object,
   thumbnail: PropTypes.string,
   name: PropTypes.string,
-  timestamp: PropTypes.string,
+  createTime: PropTypes.string,
   tokenIdHex: PropTypes.string,
   gasfee: PropTypes.string,
   value: PropTypes.number,

@@ -37,6 +37,21 @@ a {
     width: 100%;
     color: black;
 
+    td {
+      max-width: 300px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      @media only screen and (max-width: 1100px) {
+        max-width: 150px;
+      }
+
+      @media only screen and (max-width: 900px) {
+        max-width: 100px;
+      }
+    }
+
     td:nth-child(1) {
       width: 300px;
     }

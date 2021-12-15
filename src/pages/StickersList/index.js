@@ -3,7 +3,6 @@ import SearchBox from '../../components/SearchBox';
 import Sticker from '../../components/Sticker';
 import Pagination from '../../components/Pagination';
 import * as styles from './style.module.scss';
-import { reduceHexAddress, getTime, getThumbnail } from '../../utils/common';
 
 export default function StickersList() {
   const [page, setPage] = useState(1);
@@ -38,17 +37,10 @@ export default function StickersList() {
           {loading && (
             <img src="/image/Dual Ring-1s.svg" className={styles.loading} />
           )}
-          {stickers.map(item => {
+          {stickers.map(sticker => {
             return (
               <>
-                <Sticker
-                  thumbnail={getThumbnail(item.thumbnail)}
-                  name={item.name}
-                  timestamp={getTime(item.createTime)}
-                  tokenIdHex={reduceHexAddress(item.tokenIdHex)}
-                  gasfee={0}
-                  value={item.value}
-                />
+                <Sticker props={sticker} />
               </>
             );
           })}

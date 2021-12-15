@@ -86,8 +86,16 @@
             td:nth-child(1) {
               text-align: left;
             }
+
             td:nth-child(2) {
               text-align: right;
+            }
+
+            td {
+              max-width: 0;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
             }
           }
         }
