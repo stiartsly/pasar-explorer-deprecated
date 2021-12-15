@@ -64,4 +64,37 @@
       }
     }
   }
+
+  .transaction {
+    border: 1px solid #d4d4d4;
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+
+    img {
+      margin-right: 20px;
+      align-self: flex-start;
+    }
+
+    table {
+      width: 100%;
+      &:nth-child(1) {
+        margin-bottom: 20px;
+      }
+
+      th {
+        text-align: left;
+      }
+
+      td {
+        width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
 }

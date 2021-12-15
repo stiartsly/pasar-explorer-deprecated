@@ -1,14 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import * as styles from './style.module.scss';
 import TransactionGraph from '../../components/TransactionGraph';
 import TransactionRecord from './TransactionRecord';
-import { getThumbnail } from '../../utils/common';
+import { reduceHexAddress, getTime, getThumbnail } from '../../utils/common';
 
 export default function CollectibleDetail() {
   const params = useParams();
   let location = useLocation();
   const [thumbLoaded, setThumbLoaded] = useState(false);
+  const [txList, setTxList] = useState([]);
+  useEffect(async () => {
+    const res = await fetch(
+      `https://esc.elastos.io/api?module=account&action=txlist&address=${location.state.royaltyOwner}`
+    );
+    const json = await res.json();
+    setTxList(json.result);
+  }, []);
+
   return (
     <>
       <div className={styles.collectionName}>{params.collection}</div>
@@ -74,6 +83,41 @@ export default function CollectibleDetail() {
           </div>
         </div>
         <TransactionRecord />
+        {txList.map(tx => {
+          return (
+            <div key={tx.blockHash} className={styles.transaction}>
+              <img src="/image/Transaction.svg" />
+              <div>
+                <table>
+                  <thead>
+                    <th>Value</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Timestamp</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>{tx.value} ELA</td>
+                      <td>{reduceHexAddress(tx.from)}</td>
+                      <td>{reduceHexAddress(tx.to)}</td>
+                      <td>{getTime(tx.timeStamp)}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table>
+                  <thead>
+                    <th>Tx Hash</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>{reduceHexAddress(tx.hash)}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </>
   );
