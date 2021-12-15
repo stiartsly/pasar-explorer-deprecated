@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import SearchBox from '../../components/SearchBox';
-import Sticker from '../../components/Sticker';
-import Pagination from '../../components/Pagination';
-import * as styles from './style.module.scss';
+import SearchBox from '../components/SearchBox';
+import Sticker from '../components/Sticker';
+import Pagination from '../components/Pagination';
+import * as styles from '../styles/collectibleslist.module.scss';
 
-export default function StickersList() {
+export default function CollectiblesList() {
   const [page, setPage] = useState(1);
   const [loading, setLoading] = React.useState(false);
   const [stickers, setStickers] = useState([]);

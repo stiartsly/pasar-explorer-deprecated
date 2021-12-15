@@ -1,7 +1,7 @@
 import React from 'react';
 import Explorer from '../pages/Explorer';
 import CollectibleDetail from '../pages/CollectibleDetail';
-import StickersList from '../pages/StickersList';
+import CollectiblesList from '../pages/CollectiblesList';
 
 export const routes = [
   {
@@ -14,7 +14,7 @@ export const routes = [
     title: '',
     path: '/explorer/collectibles',
     exact: true,
-    body: () => <StickersList />,
+    body: () => <CollectiblesList />,
   },
   {
     title: '',

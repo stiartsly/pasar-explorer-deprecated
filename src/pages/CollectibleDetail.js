@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
-import * as styles from './style.module.scss';
-import TransactionGraph from '../../components/TransactionGraph';
-import TransactionRecord from './TransactionRecord';
-import { reduceHexAddress, getTime, getThumbnail } from '../../utils/common';
+import * as styles from '../styles/collectibledetail.module.scss';
+import TransactionGraph from '../components/TransactionGraph';
+import { reduceHexAddress, getTime, getThumbnail } from '../utils/common';
 
 export default function CollectibleDetail() {
   const params = useParams();
@@ -27,18 +26,20 @@ export default function CollectibleDetail() {
         </div>
         <h1>Collectible Assets</h1>
         <div className={styles.assetContainer}>
-          {!thumbLoaded && (
-            <img src="/image/Dual Ring-1s.svg" className={styles.loading} />
-          )}
-          <img
-            style={thumbLoaded ? {} : { display: 'none' }}
-            src={getThumbnail(location.state.thumbnail)}
-            onLoad={() =>
-              setTimeout(function () {
-                setThumbLoaded(true);
-              }, 500)
-            }
-          />
+          <div className={styles.image}>
+            {!thumbLoaded && (
+              <img src="/image/Dual Ring-1s.svg" className={styles.loading} />
+            )}
+            <img
+              style={thumbLoaded ? {} : { display: 'none' }}
+              src={getThumbnail(location.state.thumbnail)}
+              onLoad={() =>
+                setTimeout(function () {
+                  setThumbLoaded(true);
+                }, 500)
+              }
+            />
+          </div>
           <div className={styles.collectibleDetails}>
             <h1>Collectible Details</h1>
             <div className={styles.detailItem}>
@@ -82,7 +83,6 @@ export default function CollectibleDetail() {
             </div>
           </div>
         </div>
-        <TransactionRecord />
         {txList.map(tx => {
           return (
             <div key={tx.blockHash} className={styles.transaction}>

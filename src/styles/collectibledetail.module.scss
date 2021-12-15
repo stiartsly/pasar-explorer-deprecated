@@ -22,24 +22,20 @@
   }
 
   .assetContainer {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
     align-items: center;
-    height: fit-content;
 
-    .loading {
-      align-self: center;
-      margin: auto;
-    }
+    .image {
+      .loading {
+        align-self: center;
+        margin: auto;
+      }
 
-    img {
-      max-width: 550px;
-    }
-
-    .divider {
-      width: 100%;
-      height: 0;
-      border-bottom: 1px solid #999999;
+      img {
+        max-width: 100%;
+      }
     }
 
     .collectibleDetails {
@@ -49,10 +45,20 @@
       padding: 20px 50px;
       margin-left: 20px;
 
+      .divider {
+        width: 100%;
+        height: 0;
+        border-bottom: 1px solid #999999;
+      }
+
       .detailItem {
         display: flex;
         align-items: center;
         margin: 20px 0;
+
+        img {
+          align-self: flex-start;
+        }
 
         .dataWrapper {
           padding: 0 10px;

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SearchBox from '../../components/SearchBox';
-import Overview from '../../components/Overview';
-import Divide from '../../components/Divide';
-import * as styles from '../../styles/explorer.module.scss';
-import { reduceHexAddress, getTime, getThumbnail } from '../../utils/common';
+import SearchBox from '../components/SearchBox';
+import Overview from '../components/Overview';
+import Divide from '../components/Divide';
+import * as styles from '../styles/explorer.module.scss';
+import { reduceHexAddress, getTime, getThumbnail } from '../utils/common';
 
 export default function Explorer() {
   const [newestCollectibles, setNewestCollectibles] = React.useState([]);
