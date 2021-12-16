@@ -8,13 +8,16 @@ export default function CollectibleDetail() {
   const params = useParams();
   let location = useLocation();
   const [thumbLoaded, setThumbLoaded] = useState(false);
-  const [txList, setTxList] = useState([]);
+  const [txRecord, setTxRecord] = useState([]);
   useEffect(async () => {
     const res = await fetch(
-      `https://esc.elastos.io/api?module=account&action=txlist&address=${location.state.royaltyOwner}`
+      `https://assist.trinity-feeds.app/sticker/api/v1/query?creator=${location.state.royaltyOwner}`
     );
     const json = await res.json();
-    setTxList(json.result);
+    const filtered = json.data.result.filter(
+      tx => tx.tokenIndex == location.state.tokenIndex
+    );
+    setTxRecord(filtered);
   }, []);
 
   return (
@@ -83,7 +86,32 @@ export default function CollectibleDetail() {
             </div>
           </div>
         </div>
-        {txList.map(tx => {
+        {txRecord?.map(tx => {
+          return (
+            <div key={tx.tokenId} className={styles.transactionRecord}>
+              <img src="/image/Collectible Details Creator.svg" />
+              <table>
+                <thead>
+                  <tr>
+                    <th>Creator</th>
+                    <th>Royalties</th>
+                    <th>Gas Fee</th>
+                    <th>Timestamp</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{reduceHexAddress(tx.royaltyOwner)}</td>
+                    <td>{tx.royalties}</td>
+                    <td>{0}</td>
+                    <td>{getTime(tx.createTime)}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          );
+        })}
+        {/* {txList.map(tx => {
           return (
             <div key={tx.blockHash} className={styles.transaction}>
               <img src="/image/Transaction.svg" />
@@ -117,7 +145,7 @@ export default function CollectibleDetail() {
               </div>
             </div>
           );
-        })}
+        })} */}
       </div>
     </>
   );
