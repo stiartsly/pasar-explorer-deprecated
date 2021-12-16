@@ -1,16 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Button from '@mui/material/Button';
 import * as styles from './style.module.scss';
 
 export function StandardButton({ title, onClick, disabled }) {
   return (
-    <button
-      disabled={disabled}
-      className={styles.standardButton}
-      onClick={onClick}
-    >
-      {title}
-    </button>
+    <div className={styles.standardButton}>
+      <Button
+        variant="contained"
+        disabled={disabled}
+        onClick={onClick}
+      >
+        {title}
+      </Button>
+    </div>
   );
 }
 

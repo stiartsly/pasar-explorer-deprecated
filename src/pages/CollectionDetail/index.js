@@ -1,67 +1,60 @@
 import React from 'react';
 import { useParams, useLocation } from 'react-router-dom';
+import SearchBox from '../../components/SearchBox';
+import AppWeeklySales from '../../components/AppWeeklySales';
+import AppWebsiteVisits from '../../components/AppWebsiteVisits';
 import * as styles from './style.module.scss';
-import TransactionGraph from '../../components/TransactionGraph';
-import TransactionRecord from './TransactionRecord';
+import { styled } from '@mui/material/styles';
+import { Grid } from '@mui/material';
+const CoverImgStyle = styled('img')({
+  top: 0,
+  width: '100%',
+  height: '100%',
+  minHeight: '500px',
+  objectFit: 'fit',
+  border: '1px solid #888',
+  borderRadius: '10px'  
+});
 
 export default function CollectionDetail() {
+  // const [loading, setLoading] = React.useState(false);
   const params = useParams();
+  var img_url = "/image/Pasar.svg";
   let location = useLocation();
+  console.log(location);
+  // setLoading(false);
   return (
-    <>
-      <div className={styles.collectionName}>{params.collection}</div>
-      <div className={styles.collectionInfo}>
-        <div className={styles.chartContainer}>
-          <TransactionGraph />
-        </div>
-        <h1>Collectible Assets</h1>
-        <div className={styles.assetContainer}>
-          <img src={location.state.thumbnail} />
-          <div className={styles.collectibleDetails}>
-            <h1>Collectible Details</h1>
-            <div className={styles.detailItem}>
-              <img src="/image/Collectible Details Name.svg" />
-              <div className={styles.dataWrapper}>
-                <h3>Name</h3>
-                <div>Phantz Club</div>
-              </div>
-            </div>
-            <div className={styles.divider} />
-            <div className={styles.detailItem}>
-              <img src="/image/Collectible Details Description.svg" />
-              <div className={styles.dataWrapper}>
-                <h3>Description</h3>
-                <div>2822 unique collectibles on the blockchain</div>
-              </div>
-            </div>
-            <div className={styles.divider} />
-            <div className={styles.detailItem}>
-              <img src="/image/Collectible Details Creator.svg" />
-              <div className={styles.dataWrapper}>
-                <h3>Creator</h3>
-                <div>0x651s...shslf</div>
-              </div>
-            </div>
-            <div className={styles.divider} />
-            <div className={styles.detailItem}>
-              <img src="/image/Collectible Details Owner.svg" />
-              <div className={styles.dataWrapper}>
-                <h3>Owner</h3>
-                <div>0x243s...GTghdS</div>
-              </div>
-            </div>
-            <div className={styles.divider} />
-            <div className={styles.detailItem}>
-              <img src="/image/Collectible Details Contact Address.svg" />
-              <div className={styles.dataWrapper}>
-                <h3>Contract Address</h3>
-                <div>0x651sdfddfsfs...shslf</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <TransactionRecord />
+    <div className={styles.container}>
+      <div className={styles.logoWrapper}>
+        <img alt="logo" src="/image/Pasar.svg" width="150px" />
       </div>
-    </>
+      <div className={styles.search}>
+        <SearchBox />
+      </div>
+      <div className={styles.view}>
+        <h2>{params.collection}</h2>
+        <Grid container spacing={3}>
+          <Grid item xs={12} md={6} lg={12}>
+            <AppWebsiteVisits />
+          </Grid>
+        </Grid>
+        <h2>Collectible Asset</h2>
+        <Grid container spacing={3}>
+          <Grid item xs={12} md={6} lg={6}>
+            <CoverImgStyle src={img_url} />
+          </Grid>
+          <Grid item xs={12} sm={6} md={6}>
+            <AppWeeklySales />
+          </Grid>
+        </Grid>
+        <div className={styles.content}>
+          {/* {loading && (
+            <img src="/image/Dual Ring-1s.svg" className={styles.loading} />
+          )} */}
+          <img src=""/>
+
+        </div>
+      </div>
+    </div>
   );
 }

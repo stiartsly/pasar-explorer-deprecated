@@ -43,7 +43,7 @@
     a {
       all: initial;
       display: flex;
-      font-size: 20px;
+      font-size: 16px;
       position: relative;
       cursor: pointer;
       height: 30px;
@@ -52,14 +52,16 @@
         padding: 10px 0;
       }
 
-      span {
+      label {
         font-family: 'Roboto', sans-serif;
         color: rgba($color: #000000, $alpha: 0.42);
+        margin: auto;
+        cursor: pointer;
       }
     }
 
     .active {
-      span {
+      label {
         color: rgba($color: #000000, $alpha: 1);
       }
     }

@@ -23,6 +23,7 @@ a {
 
   img {
     margin-right: 20px;
+    border-radius: 16px;
   }
 
   .row {
@@ -36,6 +37,12 @@ a {
 
     .col {
       width: 20%;
+    }
+    .col_center{
+      text-align: center;
+      div{
+        text-align: center;
+      }
     }
 
     .title {

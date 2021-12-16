@@ -26,7 +26,7 @@ export const routes = [
   },
   {
     title: '',
-    path: '/seemore/Newest Collectibles/:collection',
+    path: '/explorer/collectibles/:collection',
     exact: true,
     body: () => <CollectionDetail />,
   },

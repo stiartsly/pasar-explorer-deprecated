@@ -30,7 +30,7 @@ export default function Navbar() {
                     location.pathname == route.path ? styles.active : null
                   }
                 >
-                  <span>{route.title}</span>
+                  <label>{route.title}</label>
                 </Link>
               )
           )}

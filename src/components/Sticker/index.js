@@ -12,28 +12,28 @@ export default function Sticker(props) {
       }}
     >
       <div className={styles.sticker_container}>
-        <img src={props.thumbnail} width="70px" />
+        <img src={props.thumbnail} width="50px" />
         <div style={{ width: '100%' }}>
           <div className={styles.row}>
             <div className={styles.col}>
-              <div className={styles.title}>Collection</div>
+              <div className={styles.title}>Collectible</div>
               <div className={styles.value}>{props.name}</div>
             </div>
-            <div className={styles.col}>
+            <div className={`${styles.col} ${styles.col_center}`}>
               <div className={styles.title}>Token ID</div>
               <div className={styles.value}>{props.tokenIdHex}</div>
             </div>
             <div className={styles.col}>
               <div className={styles.title}>Value</div>
-              <div className={styles.value}>{props.value}</div>
+              <div className={styles.value}>{props.value}&nbsp;ELA</div>
             </div>
             <div className={styles.col}>
               <div className={styles.title}>Gas Fee</div>
-              <div className={styles.value}>{props.gasfee}</div>
+              <div className={styles.value}>{props.gasfee}&nbsp;ELA</div>
             </div>
-            <div className={styles.col}>
-              <div className={styles.title}>Date</div>
-              <div className={styles.value}>{props.timestamp}</div>
+            <div className={`${styles.col} ${styles.col_center}`}>
+              <div className={styles.title}>Timestamp</div>
+              <div className={styles.value}>{props.timestamp.date}<br/>{props.timestamp.time}</div>
             </div>
           </div>
         </div>
@@ -46,7 +46,7 @@ Sticker.propTypes = {
   props: PropTypes.object,
   thumbnail: PropTypes.string,
   name: PropTypes.string,
-  timestamp: PropTypes.string,
+  timestamp: PropTypes.object,
   tokenIdHex: PropTypes.string,
   gasfee: PropTypes.string,
   value: PropTypes.number,

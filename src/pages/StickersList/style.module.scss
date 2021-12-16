@@ -17,13 +17,38 @@
 
   .search {
     position: absolute;
-    top: 15px;
-    left: 250px;
+    top: 30px;
+    left: 220px;
   }
-
+  
   .stickers_list {
     display: flex;
     flex-direction: column;
-    max-width: 100vw;
+    min-width: 700px;
+    width: 75%;
+    .header{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h2{
+        color: black;
+      }
+    }
+    .content {
+      position: relative;
+      min-height: 200px;
+      .loading {
+          position: absolute;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+      }
+    }
+    .bottom{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 }

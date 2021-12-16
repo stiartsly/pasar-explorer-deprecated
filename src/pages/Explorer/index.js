@@ -4,7 +4,7 @@ import SearchBox from '../../components/SearchBox';
 import Overview from '../../components/Overview';
 import Divide from '../../components/Divide';
 import * as styles from '../../styles/explorer.module.scss';
-import { reduceHexAddress, getTime, getThumbnail } from '../../utils/common';
+import { reduceHexAddress, getElapsedTime, getThumbnail } from '../../utils/common';
 
 export default function Explorer() {
   const [newestCollectibles, setNewestCollectibles] = React.useState([]);
@@ -26,7 +26,7 @@ export default function Explorer() {
           <img alt="logo" src="/image/Pasar.svg" width="360px" />
         </div>
         <div className={styles.search}>
-          <SearchBox placeholder="Search by name/contract/address/token ID" />
+          <SearchBox />
         </div>
         <Overview />
       </div>
@@ -44,7 +44,7 @@ export default function Explorer() {
             <div className={styles.content}>
               {loadingCollectibles && (
                 <img
-                  src="image/Dual Ring-1s-200px.svg"
+                  src="image/Dual Ring-1s.svg"
                   className={styles.loading}
                 />
               )}
@@ -58,10 +58,11 @@ export default function Explorer() {
                       <table>
                         <tr>
                           <td>{collectible.name}</td>
-                          <td>{getTime(collectible.createTime)}</td>
+                          <td>{getElapsedTime(collectible.createTime)}</td>
                         </tr>
                         <tr>
-                          <td>{reduceHexAddress(collectible.tokenIdHex)}</td>
+                          <td>Token ID : {reduceHexAddress(collectible.tokenIdHex)}</td>
+                          <td>Gas Fee : 0 ELA</td>
                         </tr>
                       </table>
                     </div>

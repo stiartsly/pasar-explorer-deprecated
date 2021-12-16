@@ -1,62 +1,33 @@
-.collectionName {
-  font-size: 40px;
-  font-weight: bold;
-  padding: 20px 250px;
-}
-
-.collectionInfo {
-  margin: 50px 250px;
+.container {
+  color: #e5e5e5;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 50px 0;
 
-  .chartContainer {
-    margin-bottom: 50px;
-    background-color: #ffffff;
-    border: 1px solid #999999;
-    border-radius: 30px;
-    padding: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .logoWrapper {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    @media only screen and (max-width: 400px) {
+      display: none;
+    }
   }
 
-  .assetContainer {
+  .search {
+    position: absolute;
+    top: 30px;
+    left: 220px;
+  }
+  
+  .view {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: fit-content;
-
-    img {
-      max-width: 550px;
-    }
-
-    .divider {
-      width: 100%;
-      height: 0;
-      border-bottom: 1px solid #999999;
-    }
-
-    .collectibleDetails {
-      background-color: #ffffff;
-      border: 1px solid #999999;
-      border-radius: 30px;
-      padding: 20px 50px;
-      margin-left: 20px;
-
-      .detailItem {
-        display: flex;
-        align-items: center;
-        margin: 20px 0;
-
-        .dataWrapper {
-          padding: 0 10px;
-
-          h3 {
-            margin: 0;
-          }
-        }
-      }
+    flex-direction: column;
+    max-width: 100vw;
+    width: 75%;
+    h2{
+      color: black;
     }
   }
 }
