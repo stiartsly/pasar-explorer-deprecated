@@ -1,0 +1,15 @@
+.standardButton {
+  button{
+    background-color: #000;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 0 2px;
+    border: none;
+    border-radius: 16px;
+    min-width: 40px;
+    text-transform: none;
+    &:disabled {
+      background-color: #aabff6;
+    }
+  }
+}

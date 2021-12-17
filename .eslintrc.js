@@ -15,7 +15,8 @@ module.exports = {
   },
   plugins: ['react', 'prettier'],
   rules: {
-    'prettier/prettier': ['error'],
+    // 'prettier/prettier': ['error'],
+    'prettier/prettier': 0,
     'react/no-typos': 'error',
     'react/jsx-indent-props': [1, 2],
   },

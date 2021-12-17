@@ -1,0 +1,51 @@
+.pagenation {
+    display: flex;
+    button {
+        background-color: #000;
+        color: #fff;
+        padding: 7px 10px;
+        margin: 0 2px;
+        border: none;
+        border-radius: 16px;
+        min-width: 40px;
+        cursor: pointer;
+        svg{
+            font-size: 16px;
+        }
+    }
+    button:disabled {
+        background-color: #d3d3d3;
+        cursor: default;
+    }
+    #page {
+        background-color: #000;
+        color: #fff;
+    }
+}
+.ShowSelect{
+    label{
+        color: black;
+        font-size: 16px;
+        font-weight: normal;
+    }
+    .select_box{
+        margin: 0 10px;
+        height: 40px;
+        width: 70px;
+        border-radius: 16px;
+        background: black;
+        color: white;
+        svg{
+            color: white !important;
+        }
+        div:nth-child(1){
+            padding: 0px 14px;
+        }
+    }
+}
+:export {
+    whitecolor: {
+        background-color: #000;
+        color: #fff;
+    };
+}

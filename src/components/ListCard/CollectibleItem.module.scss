@@ -1,0 +1,47 @@
+.collectibleitem {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 20px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-width: 500px;
+
+    @media only screen and (max-width: 650px) {
+      min-width: 0;
+    }
+
+    .name {
+      font-size: 26px;
+      color: #000000;
+    }
+
+    .timestamp {
+      font-size: 16px;
+      color: rgba($color: #000000, $alpha: 0.42);
+
+      @media only screen and (max-width: 650px) {
+        display: none;
+      }
+    }
+
+    .tokenIdHex {
+      font-size: 16px;
+      color: rgba($color: #000000, $alpha: 0.42);
+    }
+
+    .gasfee {
+      font-size: 16px;
+      color: rgba($color: #000000, $alpha: 0.42);
+      @media only screen and (max-width: 650px) {
+        display: none;
+      }
+    }
+  }
+}

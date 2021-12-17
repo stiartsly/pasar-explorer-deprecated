@@ -1,0 +1,196 @@
+a {
+  text-decoration: none;
+}
+
+.listbox {
+  margin: 10px;
+  color: #000000;
+  margin: 0 200px;
+  padding: 0 100px;
+  width: 100%;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    .title {
+      font-size: 26px;
+      color: #000000;
+    }
+
+    .pagenation {
+      display: flex;
+    }
+
+    .pageNum {
+      font-size: 16px;
+      color: #ffffff;
+      background-color: #000000;
+      border-radius: 18px;
+      padding: 10px;
+    }
+  }
+
+  .collectibleitem {
+    border: 1px solid #d4d4d4;
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+
+    &:hover {
+      box-shadow: 2px 2px 5px #999999;
+      transition: box-shadow 0.5s;
+    }
+
+    &:active {
+      box-shadow: 1px 1px 3px #999999;
+      transition: box-shadow 0.5s;
+    }
+
+    img {
+      margin-right: 20px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      min-width: 500px;
+
+      @media only screen and (max-width: 650px) {
+        min-width: 0;
+      }
+
+      .col {
+        width: 20%;
+      }
+
+      .title {
+        font-size: 16px;
+        color: #000000;
+        padding: 5px 0;
+      }
+
+      .value {
+        font-size: 16px;
+        color: rgba($color: #000000, $alpha: 0.42);
+        padding: 5px 0;
+      }
+    }
+  }
+}
+
+.transactionitem {
+  border: 1px solid #d4d4d4;
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+
+  img {
+    margin-right: 20px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 500px;
+
+    @media only screen and (max-width: 650px) {
+      min-width: 0;
+    }
+
+    .col_name {
+      width: 20%;
+      text-align: left;
+    }
+
+    .col_description {
+      width: 55%;
+      text-align: center;
+    }
+
+    .col_owner {
+      width: 15%;
+      text-align: center;
+    }
+
+    .col_date {
+      width: 10%;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 16px;
+      color: #000000;
+      padding: 5px 0;
+    }
+
+    .value {
+      font-size: 16px;
+      color: rgba($color: #000000, $alpha: 0.42);
+      padding: 5px 0;
+    }
+  }
+}
+
+.selectContainer {
+  display: flex;
+  align-items: center;
+
+  .selectBox {
+    width: 55px;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 0;
+    margin: 0 10px;
+    border-radius: 20px;
+    position: relative;
+
+    .selectList {
+      background-color: #000000;
+      position: absolute;
+      top: 35px;
+      left: 0;
+      overflow: hidden;
+      height: 0;
+      transition: height 0.5s;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+
+      div {
+        padding: 5px 25px 5px 10px;
+
+        &:hover {
+          background-color: #222222;
+        }
+      }
+    }
+
+    .selectWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:hover {
+      cursor: pointer;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+
+      .selectList {
+        transition: height 0.5s;
+        height: fit-content;
+      }
+    }
+
+    span {
+      margin-right: 5px;
+    }
+  }
+}

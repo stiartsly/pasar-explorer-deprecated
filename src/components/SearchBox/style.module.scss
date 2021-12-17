@@ -1,0 +1,16 @@
+.searchbox {
+  display: 'flex';
+  width: 500px;
+  height: 40px;
+  display: flex;
+  border-radius: 20px !important;
+  padding-right: 10px;
+  @media only screen and (max-width: 1300px) {
+    width: 90%;
+  }
+
+  img {
+    width: 30px;
+    padding: 0 10px;
+  }
+}
